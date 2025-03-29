@@ -77,7 +77,7 @@ section as you go. DO NOT forget about it!
 2. https://docs.python.org/3.13/library/turtle.html String: ".onkeypress()" # Reference to the Turtle module.
 3. 
 ---
-
+ 
 ## Milestone 2: Code Setup and Issue Queue
 
 Most importantly, keep your issue queue up to date, and focus on your code. 🙃
