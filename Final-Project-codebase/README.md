@@ -31,8 +31,6 @@ HW05-codebase, offers some insight into the creation of function.
 TW03-codebase, offers us the Bao-Stro-pha-don in order to create a pattern using the Turtle module.
 TW11-codebase, offers us insight into a method for moving an object. In our case it will be the turtle object use for drawing the maze, and navigating the maze.
 
-`
-
 ❗ **CRC Card(s)**:
   - Create a CRC card for each class that your project will implement.
   - See this link for a sample CRC card 
@@ -48,7 +46,7 @@ TW11-codebase, offers us insight into a method for moving an object. In our case
 
 ![Don't leave me in your README!](Final-Project-codebase/image/crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one.")
 
-❗️**Branches**: This project will **require** effective use of git. 
+**Branches**: This project will **require** effective use of git. 
 
 Each partner should create a branch at the beginning of the project, 
 and stay on this branch (or branches of their 
@@ -61,7 +59,7 @@ then re-branching out from the merged code.
 
 ```
     Branch 1 starting name: EBOSELEA_KORNRUMPFA
-    Branch 2 starting name: 
+    Branch 2 starting name: eboselea_Final-Project 
 ```
 
 ### References 
@@ -76,6 +74,8 @@ section as you go. DO NOT forget about it!
 
 
 1. Google A.I. Overview, generated Maze.py in reply to "projects to create a maze using he turtle module in python".
+2. https://docs.python.org/3.13/library/turtle.html # Reference to the Turtle module.
+3. 
 ---
 
 ## Milestone 2: Code Setup and Issue Queue
