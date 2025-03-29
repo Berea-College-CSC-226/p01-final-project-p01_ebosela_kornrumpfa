@@ -20,7 +20,7 @@ they accompany. (This means that your final README should have no ❗️in it!)
 
 **Purpose**: 
 `The idea of game is that two players will be able to work together 
-to build the maze, and to play the maze. `
+to build the maze, and to play the maze. ` 
 
 **Source Assignment(s)**: 
 `
