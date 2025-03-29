@@ -1,23 +1,37 @@
 # ❗CSC226 Final Project
-
+# REPO: https://github.com/Berea-College-CSC-226/p01-final-project-p01_ebosela_kornrumpfa
 ## Instructions
 
-❗️Exclamation Marks ❗️indicate action items; you should remove these emoji as you complete/update the items which 
-  they accompany. (This means that your final README should have no ❗️in it!)
+Exclamation Marks indicate action items; 
+you should remove these emoji as you complete/update the items which 
+they accompany. (This means that your final README should have no ❗️in it!)
 
-❗️**Author(s)**: Your name(s) here
+**Author(s)**: ANT & EBO.
 
-❗️**Google Doc Link**: Your link here
+**Google Doc Link**: https://docs.google.com/document/d/1WgWAkM1vz2_9izv_I2qUvImEVVPDijUqdgs8tOyRLrI/edit?usp=sharing
 
 ---
 
 ## Milestone 1: Setup, Planning, Design
 
-❗️**Title**: `What is the title of your project? Be creative! Replace this block of text.`
+**Title**:
+`Confused Etch-A-Sketch Maze'
+# IDEAS = [Etch-A-Sketch, Fractal, Wordle Solver, Maze Game]
 
-❗**Purpose**: `In a single sentence, describe WHAT your project will do. Replace this block of text.`
+**Purpose**: 
+`The idea of game is that two players will be able to work together 
+to build the maze, and to play the maze. `
 
-❗️**Source Assignment(s)**: `List which original assignments you will base your project on? Replace this block of text.`
+**Source Assignment(s)**: 
+`
+HW02-codebase, HW02_kornrumpf.py automatically generates a diamond outline for a maze.
+HW03-codebase, doesn't offer much inspiration.
+HW04-codebase, offers most insight into test-suites, but how would we create that? There might be some inspiration from the life path homework.
+HW05-codebase, offers some insight into the creation of function.
+TW03-codebase, offers us the Bao-Stro-pha-don in order to create a pattern using the Turtle module.
+TW11-codebase, offers us insight into a method for moving an object. In our case it will be the turtle object use for drawing the maze, and navigating the maze.
+
+`
 
 ❗️**CRC Card(s)**:
   - Create a CRC card for each class that your project will implement.

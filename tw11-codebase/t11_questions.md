@@ -1,0 +1,136 @@
+# T11: The Legend of Tuna: Breath of the Catnip
+
+## Instructions
+
+Please replace each `**Replace This Text With Your Response**` with your answer.
+
+___
+
+## SECTION 1
+#
+1.a. First, discuss with your team and assign yourselves roles. Try to pick the role you’ve had the least experience in.
+
+```
+    |                 | Monday | Wednesday | Friday |
+    |-----------------|--------|-----------|---------|
+    | Driver          | ANT    | ARBY                | DAVID  |
+    | Navigator       | DAVID  | ARBY//DAVID = *     | *      |
+    | Quality Control | ARBY   | DAVID//ARBY = *     | *      |
+```
+
+___
+
+## SECTION 2
+
+2.a. Look at the three Python files in the repository. 
+    Identify below all of the classes, and a brief description of
+    what each one represents:
+
+```
+In the files: player.py, game.py, and NPC.py
+
+    Classes:
+       Player # Represents the character in game AND handles the movement of the player. 
+       NPC # Represents the NPC in game AND handles the movement of the NPC.
+       Game # Imports the classes from the other files. Game class for handling the game logic. 
+            - What is the game logic?
+```
+
+2.b. Look more closely at the **t11_game.py** file. 
+There are 8 lines; identify if they are 
+    a) instance parameters, defined as: a type of input that allows for the creation of object instances? I.e. Instantiation. 
+    b) method calls within the class, defined as:
+    c) method calls to another class or library, defined as: 
+
+(Some are more than one answer!)
+
+```
+    self.size = 800, 600                              # This creates the window and resolution. Is it [a,b,c]? | Instance paramter
+    self.running = True                               # Is it [a,b,c]?
+    pygame.init()                                     # Is it [a,b,c]?
+    self.screen = pygame.display.set_mode(self.size)  # Is it [a,b,c]?
+    self.clock = pygame.time.Clock()                  # Is it [a,b,c]?
+    self.player = Player(self.size)                   # Is it [a,b,c]?
+    self.good_npc = NPC(self.size)                    # Is it [a,b,c]?
+    self.screen.fill('#9CBEBA')                       # Is it [a,b,c]?
+```
+
+2.c. Parse through the `run()` method of **t11_game.py**. In particular, note how the game handles 
+    a) collisions between the player and NPC,
+    b) moving the player and NPC around the screen, 
+    c) redrawing the player and NPC after they move,
+    d) how often the game updates the screen
+
+In your own words, describe how the four items above are accomplished in the Game class:
+
+```
+    a) **Replace This Text With Your Response**
+    b) **Replace This Text With Your Response**
+    c) **Replace This Text With Your Response**
+    d) **Replace This Text With Your Response**
+```
+
+_Return to the Google Doc to continue the assignment._
+
+---
+
+## SECTION 3
+
+3.a: Take a look at the **t11_player.py** file. What class does the `Player` class inherit functionality from? 
+     How do you know?
+
+```
+    **Replace This Text With Your Response**    
+```
+
+3.b. Sprites need two attributes to function: A surface and a rectangle. The surface (implemented in a `Surface` 
+     class inside **pygame**) represents the drawing that will be rendered to the screen. The rectangle 
+     (implemented in the `Rect` class in **pygame**) represents the area where the surface will be drawn on the screen, 
+     including its width, height, and position. Find the lines of code that implement these two ideas, 
+     and explain what each line does. 
+
+```
+    **Replace This Text With Your Response**
+```
+
+3.c. The `Player` class has only one method so far. Parse that code and docstring, and describe what it does:
+
+```
+    **Replace This Text With Your Response**
+```
+
+3.d. Similarly, the `NPC` class in **t11_NPC.py** also inherits the `Sprite` class from **pygame**, 
+     but it does a little more than our `Player` class. Compare the two classes, and identify/describe the differences:
+
+```
+    **Replace This Text With Your Response**
+```
+
+3.e. Of particular interest is how we keep the `NPC` on the screen. Describe how we're using 
+    the `self.rect` attribute in the `get_direction()` method to keep the `NPC` visible.  
+
+```
+    **Replace This Text With Your Response**
+```
+
+_Return to the Google doc to continue the assignment._ 
+
+---
+
+## SECTION 4
+
+Using **t11_NPC.py** as a starting point, create a new class called `Good_NPC` (you can do this in the **t11_NPC.py** 
+file, or create a new file; your choice). Have the new class inherit from the `NPC` class that I gave you, 
+including calling the parent class's initializer. Convert **t11_game.py** so that it spawns Taco Cat as a `Good_NPC` 
+instead of an NPC. Debug any errors you get; the program should work, at this point. 
+
+4n
+## SECTION 5
+
+5.a. Inheritance allows us to produce special cases of a class, extending their functionality. Describe
+    what challenges you faced while implementing the child classes that extended the `NPC` class. 
+    How did you overcome them?
+
+```
+    **Replace This Text With Your Response**
+```
