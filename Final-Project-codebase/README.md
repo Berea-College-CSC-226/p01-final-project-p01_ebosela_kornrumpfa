@@ -74,7 +74,7 @@ section as you go. DO NOT forget about it!
 
 
 1. Google A.I. Overview, generated Maze.py in reply to "projects to create a maze using he turtle module in python".
-2. https://docs.python.org/3.13/library/turtle.html # Reference to the Turtle module.
+2. https://docs.python.org/3.13/library/turtle.html String: ".onkeypress()" # Reference to the Turtle module.
 3. 
 ---
 
