@@ -31,38 +31,53 @@ HW05-codebase, offers some insight into the creation of function.
 TW03-codebase, offers us the Bao-Stro-pha-don in order to create a pattern using the Turtle module.
 TW11-codebase, offers us insight into a method for moving an object. In our case it will be the turtle object use for drawing the maze, and navigating the maze.
 
-`
-
-❗️**CRC Card(s)**:
+❗ **CRC Card(s)**:
   - Create a CRC card for each class that your project will implement.
-  - See this link for a sample CRC card and a template to use for your own cards (you will have to make a copy to edit):
+  - See this link for a sample CRC card 
+  - and a template to use for your own cards 
+  - (you will have to make a copy to edit):
     [CRC Card Example](https://docs.google.com/document/d/1JE_3Qmytk_JGztRqkPXWACJwciPH61VCx3idIlBCVFY/edit?usp=sharing)
-  - Tables in markdown are not easy, so we suggest saving your CRC card as an image and including the image(s) in the 
-    README. You can do this by saving an image in the repository and linking to it. See the sample CRC card below - 
+  - Tables in markdown are not easy, so we suggest 
+  - saving your CRC card as an image and including the image(s) in the 
+    README. 
+  - You can do this by saving an image in the repository and linking to it. 
+  - See the sample CRC card below - 
     and REPLACE it with your own:
-  
-![Don't leave me in your README!](image/crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
 
-❗️**Branches**: This project will **require** effective use of git. 
+![Don't leave me in your README!](Final-Project-codebase/image/crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one.")
 
-Each partner should create a branch at the beginning of the project, and stay on this branch (or branches of their 
-branch) as they work. When you need to bring each others branches together, do so by merging each other's branches 
-into your own, following the process we've discussed in previous assignments, then re-branching out from the merged code.  
+**Branches**: This project will **require** effective use of git. 
+
+Each partner should create a branch at the beginning of the project, 
+and stay on this branch (or branches of their 
+branch) as they work. 
+When you need to bring each others branches together, 
+do so by merging each other's branches 
+into your own, 
+following the process we've discussed in previous assignments, 
+then re-branching out from the merged code.  
 
 ```
-    Branch 1 starting name: _____________
-    Branch 2 starting name: _____________
+    Branch 1 starting name: EBOSELEA_KORNRUMPFA
+    Branch 2 starting name: eboselea_Final-Project 
 ```
 
 ### References 
 
-Throughout this project, you will likely use outside resources. Reference all ideas which are not your own, 
-and describe how you integrated the ideas or code into your program. This includes online sources, people who have 
-helped you, AI tools you've used, and any other resources that are not solely your own contribution. Update this 
+Throughout this project, you will likely use outside resources. 
+Reference all ideas which are not your own, 
+and describe how you integrated the ideas or code into your program. 
+This includes online sources, people who have 
+helped you, AI tools you've used, 
+and any other resources that are not solely your own contribution. Update this 
 section as you go. DO NOT forget about it!
 
----
 
+1. Google A.I. Overview, generated Maze.py in reply to "projects to create a maze using he turtle module in python".
+2. https://docs.python.org/3.13/library/turtle.html String: ".onkeypress()" # Reference to the Turtle module.
+3. 
+---
+ 
 ## Milestone 2: Code Setup and Issue Queue
 
 Most importantly, keep your issue queue up to date, and focus on your code. 🙃
