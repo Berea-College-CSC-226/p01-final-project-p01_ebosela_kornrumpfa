@@ -1,13 +1,28 @@
 import turtle
-window = turtle.Screen() # Fundamentally, this line uses the Screen() method inside of the turtle class to create an object called windows. This line crashes if there is no event handler in line 3.
-# a=type(wn)
-# print(a)
-# b="string"
-# b1=type(b)
-# print(b1)
-# z=[1,2,3]
-# type(z)
-#print(z)
+
+window = turtle.Screen()# Fundamentally, this line uses the Screen() method inside of the turtle class to create an object called windows. This line crashes if there is no event handler in line 3.
+window.bgcolor("white")
+window.title("The Maze Game")
+window.setup(700, 700)
+
+class Pen(turtle.Turtle):
+    def __init__(self):
+        turtle.Turtle.__init__(self)
+        self.shape(square)
+        self.color(black)
+        self.penup()
+        self.speed(1)
+
+
+
+class Maze:
+    def __init__(self, cols, rows):
+    self.cols = cols
+    self.rows = rows
+    self.thickness = 4
+
+
+
 
 Ant = turtle.Turtle() # This will create an object in memory that can be acted on.
 Aije = turtle.Turtle() # This will create an object in memory that can be acted on.
@@ -50,3 +65,11 @@ window.listen()
 
 
 window.exitonclick()
+# a=type(wn)
+# print(a)
+# b="string"
+# b1=type(b)
+# print(b1)
+# z=[1,2,3]
+# type(z)
+#print(z)
