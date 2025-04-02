@@ -15,7 +15,7 @@ they accompany. (This means that your final README should have no ❗️in it!)
 ## Milestone 1: Setup, Planning, Design
 
 **Title**:
-`Confused Etch-A-Sketch Maze'
+The Maze Game - The code creates a maze for the player to complete, but the layout is random every time. 
 # IDEAS = [Etch-A-Sketch, Fractal, Wordle Solver, Maze Game]
 
 **Purpose**: 
@@ -75,7 +75,9 @@ section as you go. DO NOT forget about it!
 
 1. Google A.I. Overview, generated Maze.py in reply to "projects to create a maze using he turtle module in python".
 2. https://docs.python.org/3.13/library/turtle.html String: ".onkeypress()" # Reference to the Turtle module.
-3. 
+3. https://www.youtube.com/watch?v=-0q_miviUDs&t=113s - The Python Maze Game Part 1: A example of a maze program.
+4. https://inventwithpython.com/recursion/chapter11.html - Maze Generater: A website that has examples of code for
+    creating mazes with random layouts
 ---
  
 ## Milestone 2: Code Setup and Issue Queue
