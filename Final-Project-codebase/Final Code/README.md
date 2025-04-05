@@ -89,6 +89,7 @@ What has surprised you so far? Describe your general feelings. Be honest with yo
 
 ```
     **Replace this text with your reflection
+    Created our first issue. I'm a bit concerned about the imagery associated with the CRC card..............................................................................................................................Do these lines in GitHub go forward???????????????????????????????????????.................. So.... as....long...as.....I...don't...<CR>....then I get an infinite line? 
 ```
 
 ---
