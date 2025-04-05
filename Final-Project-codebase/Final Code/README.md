@@ -31,7 +31,7 @@ HW05-codebase, offers some insight into the creation of function.
 TW03-codebase, offers us the Bao-Stro-pha-don in order to create a pattern using the Turtle module.
 TW11-codebase, offers us insight into a method for moving an object. In our case it will be the turtle object use for drawing the maze, and navigating the maze.
 
-❗ **CRC Card(s)**:
+ **CRC Card(s)**:
   - Create a CRC card for each class that your project will implement.
   - See this link for a sample CRC card 
   - and a template to use for your own cards 
@@ -44,7 +44,8 @@ TW11-codebase, offers us insight into a method for moving an object. In our case
   - See the sample CRC card below - 
     and REPLACE it with your own:
 
-![Don't leave me in your README!](Final-Project-codebase/image/crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one.")
+(Final-Project-codebase/Maze Class CRC/crc.png, Final-Project-codebase/Player Class CRC/crc.png)
+"Image of CRC card as an example. Upload your CRC card(s) in place of this one.")
 
 **Branches**: This project will **require** effective use of git. 
 
@@ -88,7 +89,10 @@ What has surprised you so far? Describe your general feelings. Be honest with yo
 ```
     **Replace this text with your reflection
 ```
+    
+    Issue Queue:
 
+- 
 ---
 
 ## Milestone 3: Virtual Check-In
