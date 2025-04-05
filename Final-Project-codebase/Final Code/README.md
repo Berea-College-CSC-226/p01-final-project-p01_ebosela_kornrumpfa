@@ -20,7 +20,7 @@ they accompany. (This means that your final README should have no ❗️in it!)
 
 **Purpose**: 
 `The idea of game is that two players will be able to work together 
-to build the maze, and to play the maze. ` 
+to build the maze, and to play the maze. `
 
 **Source Assignment(s)**: 
 `
@@ -75,9 +75,7 @@ section as you go. DO NOT forget about it!
 
 1. Google A.I. Overview, generated Maze.py in reply to "projects to create a maze using he turtle module in python".
 2. https://docs.python.org/3.13/library/turtle.html String: ".onkeypress()" # Reference to the Turtle module.
-3. https://youtu.be/-0q_miviUDs: Python Maze Game Tutorial Part 1 - Used as a example to model our program after.
-4. https://inventwithpython.com/recursion/chapter11.html: Maze Generater - A example of a program that can generate
-    random maze layouts
+3. 
 ---
  
 ## Milestone 2: Code Setup and Issue Queue
