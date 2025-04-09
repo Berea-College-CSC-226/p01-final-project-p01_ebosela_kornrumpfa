@@ -89,8 +89,14 @@ Reflect on what you’ve done so far. How’s it going? Are you feeling behind/a
 What has surprised you so far? Describe your general feelings. Be honest with yourself; this section is for you, not me.
 
 ```
-    **Replace this text with your reflection
-    Created our first issue. I'm a bit concerned about the imagery associated with the CRC card..............................................................................................................................Do these lines in GitHub go forward???????????????????????????????????????.................. So.... as....long...as.....I...don't...<CR>....then I get an infinite line? 
+    Honestly, I think this assignment is going better than I thought it would. Antonio has been a great partner,
+     and I enjoy listening to his ideas and suggestions about things we can do to improve our project. As far as 
+     where we are, I think we're in a good place right now. Most of the early portions of our project have been 
+     spend planning, gathering resources and references for our projects, and some coding for things we made need
+     later on. I'm surprised at the amount of work we've been able to do, especially with some of the out-of-control
+     circumstances we've had the last few days. But overall, it's been great,a dn i'm really curious to see what
+     we can do.
+   
 ```
 
 ---
