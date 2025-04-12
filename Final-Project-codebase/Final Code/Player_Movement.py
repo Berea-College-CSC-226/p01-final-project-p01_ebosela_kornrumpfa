@@ -1,4 +1,6 @@
 import turtle
+""" We are going to continue to use this file for reference, but are no longer
+going to use the turtle module."""
 window = turtle.Screen() # Fundamentally, this line uses the Screen() method inside of the turtle class to create an object called windows. This line crashes if there is no event handler in line 3.
 # a=type(wn)
 # print(a)
@@ -13,8 +15,8 @@ window = turtle.Screen() # Fundamentally, this line uses the Screen() method ins
 
 Ant = turtle.Turtle() # This will create an object in memory that can be acted on.
 Aije = turtle.Turtle() # This will create an object in memory that can be acted on.
-y=type(Ant)
-print(y) # The output is <class 'turtle.Turtle'> This is an object that is part of the turtle class.
+# y=type(Ant) #type test.
+# print(y) # The output is <class 'turtle.Turtle'> This is an object that is part of the turtle class.
 
 Ant.penup()
 Ant.color('red') # We defining the attributes of the object ANT.
