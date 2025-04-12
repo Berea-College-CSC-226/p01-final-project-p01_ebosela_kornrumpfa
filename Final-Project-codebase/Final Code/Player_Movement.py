@@ -9,6 +9,8 @@ window = turtle.Screen() # Fundamentally, this line uses the Screen() method ins
 # type(z)
 #print(z)
 
+### The object will be programmed to move the height or width of the grids.
+
 Ant = turtle.Turtle() # This will create an object in memory that can be acted on.
 Aije = turtle.Turtle() # This will create an object in memory that can be acted on.
 y=type(Ant)
