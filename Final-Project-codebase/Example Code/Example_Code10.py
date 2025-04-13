@@ -1,22 +1,27 @@
 """ Initially, thought that the .PY failed to generate a GUI, but this
 was simply a timing problem. This .py does generate a maze, but it cannot be
 interacted with. We need to attempt to overlay the play_movement to enable this."""
-
 import random
 import tkinter as tk
 
-WIDTH = 39  # Width of the maze (must be odd)
-HEIGHT = 19  # Height of the maze (must be odd)
-assert WIDTH % 2 == 1 and WIDTH >= 3
-assert HEIGHT % 2 == 1 and HEIGHT >= 3
-SEED = 1
-random.seed(SEED)
+
+
+
+WIDTH = 11  # Width of the maze (must be odd). Testing this value with different values [3,5,7] gives me a better understanding of how the code works.
+HEIGHT = 11  # Height of the maze (must be odd) [3,5,7] gives me a better understanding of how the code works.
+assert WIDTH % 2 == 1 and WIDTH >= 3 #assertion error
+assert HEIGHT % 2 == 1 and HEIGHT >= 3 # assertion error
+#SEED = 5 # Declarative variable.
+#random.seed(SEED) # Unsure the purpose of this, but removing the call, and declaration
+
 
 # Use these characters for displaying the maze:
-EMPTY = ' '
-MARK = '@'
+# They way these VARS interact with the rest of the program is unclear, but they are needed.
+EMPTY = 'a' # An empty space, supposedly, but inserting 'a' into it doesn't change the programs GUI.
+#MARK = '@@@@@@@@@@' # Sames.... variable doesn't seem to do anything.
 WALL = chr(9608)  # Character 9608 is '█'
-NORTH, SOUTH, EAST, WEST = 'n', 's', 'e', 'w'
+NORTH, SOUTH, EAST, WEST = 'n', 's', 'e', 'w' #Is this a dictionary, or bound list?
+
 
 # Create the filled-in maze data structure to start:
 maze = {}
@@ -101,13 +106,12 @@ class MazeApp:
                 self.markX, self.markY = nextX, nextY
                 self.visit(nextX, nextY)  # Recursive call to visit next cell
 
-
 def main():
     root = tk.Tk()
     root.title("Maze Generator")
     app = MazeApp(root)
     root.mainloop()
 
-
 if __name__ == "__main__":
     main()
+

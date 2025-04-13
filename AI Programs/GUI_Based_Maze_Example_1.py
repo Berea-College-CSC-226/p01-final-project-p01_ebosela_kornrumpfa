@@ -11,7 +11,7 @@ import tkinter as tk
 import time
 import random
 
-TILE_SIZE = 40
+TILE_SIZE = 40 # As part of the class definition draw_maze() TILE_SIZE must be defined. In that case, using capitals indicates something of a SQL or static keyword.
 TIME_LIMIT = 30  # Time limit in seconds (e.g., 60 seconds)
 
 # 🔁 Multiple, bigger maze layouts
@@ -107,10 +107,31 @@ class MazeGame:
         self.draw_maze()
         self.update_timer()
 
-    def draw_maze(self):
+""" The following class utilizes a for loop.
+    I have seen other instance of for loops that rely on a dictionary, but this seems to be
+    as an input variable. i.e. for eachKey in myDict, followed by an if statement.
+    
+    In this case 'y' is the iterator and the range function is being used with the input parameter 
+    self.row.
+    
+    I don't understand the way this works. Why self.row? Why not just an reference to a create dictionary 
+    or list? 
+    
+    To restate, all methods defined in a class that operate on objects of that class 
+    must use self at their first parameter. 
+    OK, so self is the first parameter for the method draw_maze, but why does it continue into
+    the method in:
         self.canvas.delete("all")
-        for y in range(self.rows):
-            for x in range(self.cols):
+        self.rows
+        self.cols
+        
+    
+    """
+
+def draw_maze(self):
+    self.canvas.delete("all")
+    for y in range(self.rows):
+        for x in range(self.cols):
                 tile = self.maze[y][x]
                 x1 = x * TILE_SIZE
                 y1 = y * TILE_SIZE
@@ -125,11 +146,11 @@ class MazeGame:
                 elif tile == 'G':
                     color = "green" if self.player.has_item else "gray"
 
-                self.canvas.create_rectangle(x1, y1, x2, y2, fill=color)
+    self.canvas.create_rectangle(x1, y1, x2, y2, fill=color)
 
         # Draw the player
-        px, py = self.player.x, self.player.y
-        self.canvas.create_oval(
+    px, py = self.player.x, self.player.y
+    self.canvas.create_oval(
             px * TILE_SIZE + TILE_SIZE // 4,
             py * TILE_SIZE + TILE_SIZE // 4,
             px * TILE_SIZE + 3 * TILE_SIZE // 4,
