@@ -84,12 +84,27 @@ section as you go. DO NOT forget about it!
 
 Most importantly, keep your issue queue up to date, and focus on your code. 🙃
 
-Reflect on what you’ve done so far. How’s it going? Are you feeling behind/ahead? What are you worried about? 
-What has surprised you so far? Describe your general feelings. Be honest with yourself; this section is for you, not me.
+Reflect on what you’ve done so far. How’s it going?
+Are you feeling behind/ahead? What are you worried about? 
+What has surprised you so far? 
+Describe your general feelings. Be honest with yourself; this section is for you, not me.
 
 ```
-    **Replace this text with your reflection
-    Created our first issue. I'm a bit concerned about the imagery associated with the CRC card..............................................................................................................................Do these lines in GitHub go forward???????????????????????????????????????.................. So.... as....long...as.....I...don't...<CR>....then I get an infinite line? 
+    Created our first issue. I'm a bit concerned about the imagery associated with 
+    the CRC card...............................
+    ...........................................
+    ....................................................
+    Do these lines in GitHub go forward forever?
+    ???????????????????????????????????????.................. So.... as....long...as.....I...don't...<CR>....then I get an infinite line? 
+
+    During class today 4-14, we gave a report of our progress - as 55%.
+    This is likely a bit generous, since most of our code at this point is A.I. generated,
+    however, I have been doing lots of inidivudalized analysis of these code blocks.
+    At this point, we do have a working Maze game GUI_Based_Maze_Example_1.py. 
+    I am unsure how each of the blocks satisfy the Subtasks defined in our problem queue, to do this I've
+    started to comment out the subtasks inside of AN
+    
+
 ```
 
 ---
