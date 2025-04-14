@@ -126,3 +126,32 @@ def main():
     root.mainloop()
 
 #########################################################################
+
+class Simple:  # creates an empty class
+    pass
+
+a = Simple()   # creates a Simple object and assigns it to variable a
+b = Simple()   # creates a Simple object and assigns it to variable b
+
+a.x = 5        # sets x attribute of whatever object is assigned to a to 5
+b.x = 5        # sets x attribute of whatever object is assigned to b to 5
+
+print(a.x)     # prints x attribute of watever object is assigned to a
+print(b.x)     # prints x attribute of watever object is assigned to b
+
+class Simple:  # creates a class named Simple
+    def __init__(self):  # defines our constructor
+        """
+        this is our constructor,
+
+        python passes the respective instance to us here and
+        we receive it using self which is our method/function argument
+        """
+        self.x = 5  # sets instance's x attribute to 5
+
+
+a = Simple()  # creates a Simple object and assigns it to variable a
+b = Simple()  # creates a Simple object and assigns it to variable b
+
+print(a.x)  # prints x attribute of watever object is assigned to a
+print(b.x)  # prints x attribute of watever object is assigned to b
