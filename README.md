@@ -94,7 +94,7 @@ What has surprised you so far? Describe your general feelings. Be honest with yo
      where we are, I think we're in a good place right now. Most of the early portions of our project have been 
      spend planning, gathering resources and references for our projects, and some coding for things we made need
      later on. I'm surprised at the amount of work we've been able to do, especially with some of the out-of-control
-     circumstances we've had the last few days. But overall, it's been great,a dn i'm really curious to see what
+     circumstances we've had the last few days. But overall, it's been great, and i'm really curious to see what
      we can do.
    
 ```
