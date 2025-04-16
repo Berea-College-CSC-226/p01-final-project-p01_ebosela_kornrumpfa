@@ -40,12 +40,13 @@ MAZE_LAYOUTS = [
 
 class MazeGame:
     def __init__(self, root):
+        ####################
         self.root = root
 
-        # 🔀 Choose a random maze
+        # 🔀 Choose a random maze from the number of mazes defined above.
         self.maze = random.choice(MAZE_LAYOUTS)
-        self.rows = len(self.maze)
-        self.cols = len(self.maze[0])
+        self.rows = len(self.maze)  #The length of the first layer of the nested list determines the number of rows
+        self.cols = len(self.maze[0]) #Once the first nested list is selected, the first element of that list is selected and evaluated to determine the columns.
 
         self.canvas = tk.Canvas(root, width=TILE_SIZE * self.cols, height=TILE_SIZE * self.rows)
         self.canvas.pack()
@@ -60,6 +61,7 @@ class MazeGame:
         self.root.bind("<KeyPress>", self.handle_key)
         self.draw_maze()
         self.update_timer()
+        ###################
 
     def draw_maze(self):
         self.canvas.delete("all")
@@ -114,7 +116,7 @@ class MazeGame:
                 self.timer_label.config(text=f"🎉 You won in {elapsed} seconds!")
 ###### END OF SUBTASK III #########################
 
-""" The following codeblock operates towards the end of subtask II."""
+#The following codeblock operates towards the end of subtask II.
 
     def update_timer(self):
         if self.time_left > 0 and not self.player.reached_goal:
