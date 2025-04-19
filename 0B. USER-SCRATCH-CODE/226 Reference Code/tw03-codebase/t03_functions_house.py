@@ -19,7 +19,7 @@ import turtle               # allows us to use the turtles library
 
 def make_roof(wn, shape):
     """
-    A new roof! (Made from an image of bricks)
+    A new roof! (Made from an IMAGES of bricks)
 
     :param wn: a turtle Screen object
     :param shape: a Turtle object
@@ -29,7 +29,7 @@ def make_roof(wn, shape):
     shape.penup()
     shape.setpos(80, 80)
     shape.pendown()
-    shape.shape("Bricks.gif")               # Sets the shape to the image registered above
+    shape.shape("Bricks.gif")               # Sets the shape to the IMAGES registered above
     shape.stamp()
 
 def make_main_house(shape):
@@ -129,7 +129,7 @@ def main():
     """
     wn = turtle.Screen()            # Makes a new turtle screen
     wn.colormode(255)  # change color modes
-    wn.bgpic("Lighthouse.gif")      # Sets background to an image; must be a gif!
+    wn.bgpic("Lighthouse.gif")      # Sets background to an IMAGES; must be a gif!
     shape = turtle.Turtle()
     shape.hideturtle()
 
