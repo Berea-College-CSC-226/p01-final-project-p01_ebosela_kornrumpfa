@@ -210,7 +210,7 @@ class MazeGame:
             print("⏳ Time's up! You lost the game.")
 
 ######################### END OF SUBTASK I ##################
-
+### REFACTOR & REVIEW PLAYER CLASS
 ######################### START OF SUBTASK II ###############
 class Player:
 

@@ -36,7 +36,7 @@ As I strip it out the other context, an number of errors and warning are being g
 # Example method from GUI_Based_Maze_Example_1
 
 def draw_maze(self):
-    self.canvas.delete("all") # Duplicated in GUI_Based_Maze_Example_1.py - however, I am attempting to look at the line in its own context.
+    self.canvas.delete("all") # Duplicated in 7. GUI-BASED-MAZE-EXAMPLE.py - however, I am attempting to look at the line in its own context.
     for y in range(self.rows):
         for x in range(self.cols):
                 tile = self.maze[y][x]
