@@ -1,3 +1,18 @@
+"""
+My teams final code base shows improved mastery of object-oriented programming through hand-on software development.
+The goal is to present a maze game that demonstrates increased proficiency in all major OOP concepts:
+The key task are:
+Write a class definition with a constructor
+Add and access attributes
+Write getter and setter methods
+Make attributes private
+Create a parent and child class
+Override a method in the child class
+Create an abstract class and implement it
+Instantiate objects and use them in main logic
+Handle object lifecycle (destruction or cleanup)
+
+"""
 import tkinter as tk
 import time
 import random
@@ -38,9 +53,36 @@ MAZE_LAYOUTS = [
     ]
 ]
 
+"""
+Object oriented programming relies on the creation of classes with the capacity to create objects 
+that contain both data and functionality together. In other words, the object that will be 
+created is associated with something in the real world, and its functions are associated to 
+the way real-world object interact. 
+
+Prime Example: object.function()>  microwave.cook(). 
+
+Classes, a class can be thought of as a blueprint that generically describes something: objects. 
+Classes describe the attributes (i.e., properties) and methods (i.e., behaviors) that each object 
+can have. Put another way, an object is an instance of a class. 
+A class is a blueprint that describes an object by its attribute-properties, 
+and methods of behaving.  Yet another way to state this, that a class describes 
+the attributes and methods that each object can have. 
+Sometimes it necessary to create ones own classes to solve a problem, as built in classes like 
+[str, int, float, and Turtle]  may not be effective.
+
+Objects, In object-oriented programming (OOP), objects are the basic entities that 
+exists in the memory. Each object is based on a blueprint of attributes 
+and behaviors (variables and functions) defined as Class. 
+When the program doesn’t know about the external world, it can’t do anything. 
+For example, when programming a robot to make a peanut butter sandwich, 
+the objects: bag, jar, knife, etc. are objects. 
+In python, everything is an object broadly. 
+An object is a bit of information stored in memory. Memory is manipulated. 
+"""
 class MazeGame:
-    def __init__(self, root):
+    def __init__(self, root): #The init method takes the new object as the first argument (game as self), and then set any required instance attributes to a valid state, using any other arguments passed to it (root)
         ####################
+        print("Initializing Maze Game")
         self.root = root #Object attribute of some sort, that is used when the object is created.
 
         # 🔀 Choose a random maze from the number of mazes defined above.
@@ -64,6 +106,7 @@ class MazeGame:
         ###################
 
     def draw_maze(self):
+        print("Drawing Maze")
         self.canvas.delete("all")
         for y in range(self.rows):
             for x in range(self.cols):
@@ -94,6 +137,7 @@ class MazeGame:
         )
 ### START OF SUBTASK IV ########
     def handle_key(self, event):
+        print("Handling Key Presses")
         if not self.player.reached_goal and self.time_left > 0:
             dx, dy = 0, 0
             key = event.keysym
@@ -119,6 +163,7 @@ class MazeGame:
 #The following codeblock operates towards the end of subtask II.
 
     def update_timer(self):
+        print("Updating Timer")
         if self.time_left > 0 and not self.player.reached_goal:
             self.time_left -= 1
             self.timer_label.config(text=f"Time: {self.time_left}")
@@ -133,12 +178,14 @@ class MazeGame:
 class Player:
 
     def __init__(self, x, y):
+        print("Initializing Player")
         self.x = x
         self.y = y
         self.has_item = False
         self.reached_goal = False
 
     def move(self, dx, dy, maze):
+        print("Moving Player")
         new_x = self.x + dx
         new_y = self.y + dy
 
@@ -168,6 +215,6 @@ class Player:
 if __name__ == "__main__":
     window = tk.Tk() # Create a window, similar to turtle.Screen() to create a graphical object.
     window.title("Random Maze") #Modifying the class attribute 'title' of the window object.
-    game = MazeGame(window) # Game is the object that is created by MazeGame, that is passed the window object that is created by .Tk(). This line demonstrates the use of a class as a blueprint.
+    game = MazeGame(window) # Game is the object that is created by MazeGame, that is passed the window object that is created by .Tk(). This line demonstrates the use of a class as a blueprint. This object is then loaded with "the nested items are all attributes/properties/functions of the class.
     window.mainloop() # What is .mainloop() referencing? | This is an event handler within the tkinter library. Which keep the program closing, and waits for input.
 
