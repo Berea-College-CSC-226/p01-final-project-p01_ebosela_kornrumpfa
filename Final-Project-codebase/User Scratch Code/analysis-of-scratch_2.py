@@ -196,7 +196,7 @@ class MazeGame:
             self.timer_label.config(text="Game Over! Time's up!")
             print("⏳ Time's up! You lost the game.")
 
-######################### END OF SUBTASK I ##################
+######################### END OF SUBTASK I ###################
 
 ######################### START OF SUBTASK II ###############
 class Player:
