@@ -80,11 +80,11 @@ In python, everything is an object broadly.
 An object is a bit of information stored in memory. Memory is manipulated. 
 """
 class MazeGame:
-    def __init__(self, root): #The init method takes the new object as the first argument (game as self), and then set any required instance attributes to a valid state, using any other arguments passed to it (root)
+    def __init__(self, window): #The init method takes the new object as the first argument (game as self), and then set any required instance attributes to a valid state, using any other arguments passed to it (root)
         ####################
         print("Create Initializing Maze Game")
 
-        self.root = root #Object attribute of some sort, that is used when the object is created.
+        self.window = window #Object attribute of some sort, that is used when the object is created.
 
         # 🔀 Choose a random maze from the number of mazes defined above.
         self.maze = random.choice(MAZE_LAYOUTS) # From the random module, a function called .choice() is selecting 1/3 of the maze layouts.
@@ -93,11 +93,11 @@ class MazeGame:
         print(f"{self.rows}")
         self.cols = len(self.maze[0]) #Once the first nested list is selected, the first element of that list is selected and evaluated to determine the columns.
         print(f"{self.cols}")
-        self.canvas = tk.Canvas(root, width=TILE_SIZE * self.cols, height=TILE_SIZE * self.rows) # The use of .Canvas is what allows the window to be filled with the player area items: tiles, player ball, and objectives.
+        self.canvas = tk.Canvas(window, width=TILE_SIZE * self.cols, height=TILE_SIZE * self.rows) # The use of .Canvas is what allows the window to be filled with the player area items: tiles, player ball, and objectives.
         print(f"{self.canvas}")
         self.canvas.pack() # Used to organize and arrange the widgets.
         print(f"{self.canvas}")
-        self.timer_label = tk.Label(root, text=f"Time: {TIME_LIMIT}", font=("Arial", 14))
+        self.timer_label = tk.Label(window, text=f"Time: {TIME_LIMIT}", font=("Arial", 14))
         print(f"{self.timer_label}")
         self.timer_label.pack() #Used to organize and arrange the widgets canvass and label.
         print(f"{self.timer_label.pack}")
@@ -106,13 +106,23 @@ class MazeGame:
         # 🧍‍♂️ Create maze and player before drawing
         self.player = Player(0, 0)
         print(f"{self.player}")
-        self.root.bind("<KeyPress>", self.handle_key)
-        print(f"{self.root.bind}")
+        self.window.bind("<KeyPress>", self.handle_key)
+        # This statement self.window.bind("", self.handle_key) is used to route key presses to player movement.
+        # The .bind() method comes from the __init__ working in combination with ensures that every time a key is pressed, a call to self.handle_key will be made and key information will be passed to it.
+        # In reference to the __init__ this method will bind to this widget at event SEQUENCE a call to function FUNC.
+        # .bind(<SEQUENCE>, <FUNCTION>)
+        # The tkinter event loop established by main?
+        # This statement use the .bind() method from tkinter to link key presses to the handle_key() method.
+        # When the user presses any key while the window is in focus, tkinter automatically calls self.handle_key(event).
+        #  This enables the player to move using the arrow keys.
+        print(f"{self.window.bind}")
         self.draw_maze()
         print(f"{self.draw_maze}")
         self.update_timer()
         print(f"{self.update_timer}")
-        ###################
+
+
+        ################### END OF __INIT__ METHOD #############
 
     def draw_maze(self):
         print("Drawing Maze")
@@ -148,9 +158,9 @@ class MazeGame:
         )
         print(f"{self.canvas.create_oval}")
 ### START OF SUBTASK IV ########
-    def handle_key(self, event):
+    def handle_key(self, event): ## A primary method needed for the MazeGame class.
         print("Handling Key Presses")
-        if not self.player._reached_goal and self.time_left > 0:
+        if not self.player._reached_goal and self.time_left > 0: #Boolean AND evaluation to determine if the statements will run.
             dx, dy = 0, 0
             key = event.keysym
 
@@ -181,7 +191,7 @@ class MazeGame:
         if self.time_left > 0 and not self.player._reached_goal:
             self.time_left -= 1
             self.timer_label.config(text=f"Time: {self.time_left}")
-            self.root.after(1000, self.update_timer)
+            self.window.after(1000, self.update_timer)
         elif self.time_left == 0 and not self.player._reached_goal:
             self.timer_label.config(text="Game Over! Time's up!")
             print("⏳ Time's up! You lost the game.")
