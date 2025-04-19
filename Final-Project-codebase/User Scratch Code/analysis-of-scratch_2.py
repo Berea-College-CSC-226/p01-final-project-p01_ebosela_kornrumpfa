@@ -85,7 +85,7 @@ class MazeGame:
         print("Create Initializing Maze Game")
 
         self.root = root #Object attribute of some sort, that is used when the object is created.
-
+#
         # 🔀 Choose a random maze from the number of mazes defined above.
         self.maze = random.choice(MAZE_LAYOUTS) # From the random module, a function called .choice() is selecting 1/3 of the maze layouts.
         print(f"{self.maze}")
