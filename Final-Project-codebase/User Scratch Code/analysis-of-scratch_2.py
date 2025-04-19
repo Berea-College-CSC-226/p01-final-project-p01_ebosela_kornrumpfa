@@ -82,32 +82,42 @@ An object is a bit of information stored in memory. Memory is manipulated.
 class MazeGame:
     def __init__(self, root): #The init method takes the new object as the first argument (game as self), and then set any required instance attributes to a valid state, using any other arguments passed to it (root)
         ####################
-        print("Initializing Maze Game")
+        print("Create Initializing Maze Game")
+
         self.root = root #Object attribute of some sort, that is used when the object is created.
 
         # 🔀 Choose a random maze from the number of mazes defined above.
         self.maze = random.choice(MAZE_LAYOUTS) # From the random module, a function called .choice() is selecting 1/3 of the maze layouts.
+        print(f"{self.maze}")
         self.rows = len(self.maze)  #The length of the first layer of the nested list determines the number of rows
+        print(f"{self.rows}")
         self.cols = len(self.maze[0]) #Once the first nested list is selected, the first element of that list is selected and evaluated to determine the columns.
-
+        print(f"{self.cols}")
         self.canvas = tk.Canvas(root, width=TILE_SIZE * self.cols, height=TILE_SIZE * self.rows) # The use of .Canvas is what allows the window to be filled with the player area items: tiles, player ball, and objectives.
+        print(f"{self.canvas}")
         self.canvas.pack() # Used to organize and arrange the widgets.
-
+        print(f"{self.canvas}")
         self.timer_label = tk.Label(root, text=f"Time: {TIME_LIMIT}", font=("Arial", 14))
+        print(f"{self.timer_label}")
         self.timer_label.pack() #Used to organize and arrange the widgets canvass and label.
-
+        print(f"{self.timer_label.pack}")
         self.time_left = TIME_LIMIT  # Set the initial time limit
-
+        print(f"{self.time_left}")
         # 🧍‍♂️ Create maze and player before drawing
         self.player = Player(0, 0)
+        print(f"{self.player}")
         self.root.bind("<KeyPress>", self.handle_key)
+        print(f"{self.root.bind}")
         self.draw_maze()
+        print(f"{self.draw_maze}")
         self.update_timer()
+        print(f"{self.update_timer}")
         ###################
 
     def draw_maze(self):
         print("Drawing Maze")
         self.canvas.delete("all")
+        print(f"{self.canvas.delete}")
         for y in range(self.rows):
             for x in range(self.cols):
                 tile = self.maze[y][x]
@@ -124,17 +134,19 @@ class MazeGame:
                 elif tile == 'G':
                     color = "green" if self.player.has_item else "gray"
 
-                self.canvas.create_rectangle(x1, y1, x2, y2, fill=color)
+                self.canvas.create_rectangle(x1, y1, x2, y2, fill=color) #Statement is used to color the tiles within the maze
 
         # Why isn't the block that is responsible for drawing the player not nested within a method?
         [px, py] = [self.player.x, self.player.y]
         self.canvas.create_oval(
+
             px * TILE_SIZE + TILE_SIZE // 4,
             py * TILE_SIZE + TILE_SIZE // 4,
             px * TILE_SIZE + 3 * TILE_SIZE // 4,
             py * TILE_SIZE + 3 * TILE_SIZE // 4,
             fill="blue"
         )
+        print(f"{self.canvas.create_oval}")
 ### START OF SUBTASK IV ########
     def handle_key(self, event):
         print("Handling Key Presses")
@@ -152,7 +164,9 @@ class MazeGame:
                 dx = 1
 
             self.player.move(dx, dy, self.maze)
+            print(f"{self.player.move}")
             self.draw_maze()
+            print(f"{self.draw_maze}")
 ###### END OF SUBTASK IV ######################
 ###### START OF SUBTASK III ###################
             if self.player.reached_goal:
@@ -180,9 +194,13 @@ class Player:
     def __init__(self, x, y):
         print("Initializing Player")
         self.x = x
+        print(f"{self.x}")
         self.y = y
+        print(f"{self.y}")
         self.has_item = False
+        print(f"{self.has_item}")
         self.reached_goal = False
+        print(f"{self.reached_goal}")
 
     def move(self, dx, dy, maze):
         print("Moving Player")
