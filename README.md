@@ -113,14 +113,22 @@ Describe your general feelings. Be honest with yourself; this section is for you
 
 Indicate what percentage of the project you have left to complete and how confident you feel. 
 
-❗️**Completion Percentage**: `0 - 100%`
+**Completion Percentage**: `0 - 100%`
 
-❗️**Confidence**: Describe how confident you feel about completing this project, and why. Then, describe some 
-  strategies you can employ to increase the likelihood that you'll be successful in completing this project 
-  before the deadline.
+
+**Confidence**: Describe how confident you feel about completing this project, and why. 
+Then, describe some  strategies you can employ to increase the likelihood that you'll be successful 
+in completing this project  before the deadline.
 
 ```
-    **Replace this text with your reflection
+Given that this project can be supplmented rapidly by engaing with A.I. engines, I am confident about my 
+capacity to complete. I am finding that this is primarily a learning project in which I am
+analyzing A.I. generated code, asking questions, and working with others when possible. 
+
+I do want to streamline the directory structures, file naming convention, and file internals.
+I also think there is a means of making the program even more modular, by segmenting out the code blocks
+and then importing them into a main file.
+
 ```
 
 ---
