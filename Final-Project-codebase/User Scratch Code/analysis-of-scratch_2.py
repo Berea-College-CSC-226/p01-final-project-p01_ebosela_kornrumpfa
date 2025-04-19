@@ -2,15 +2,15 @@
 My teams final code base shows improved mastery of object-oriented programming through hand-on software development.
 The goal is to present a maze game that demonstrates increased proficiency in all major OOP concepts:
 The key task are:
-Write a class definition with a constructor
-Add and access attributes
-Write getter and setter methods
-Make attributes private
-Create a parent and child class
-Override a method in the child class
-Create an abstract class and implement it
-Instantiate objects and use them in main logic
-Handle object lifecycle (destruction or cleanup)
+Write a class definition with a constructor. #__init__() methods (e.g., in MazeGame, Player)
+Add and access class and or instance attributes. #There are no class attributes in this program, only instance attributes.
+Write getter and setter methods #
+Make instance attributes private # Successfully did so with the use of classes.
+Create a parent and child class # N/A
+Override a method in the child class # N/A
+Create an abstract class and implement it.
+Instantiate objects and use them in main logic. # game = MazeGame(window) and self.player = Player(...)
+Handle object lifecycle (destruction or cleanup).
 
 """
 import tkinter as tk
@@ -129,15 +129,15 @@ class MazeGame:
                 color = "lightgray"
                 if tile == 'W':
                     color = "black"
-                elif tile == 'I' and not self.player.has_item:
+                elif tile == 'I' and not self.player._has_item:
                     color = "gold"
                 elif tile == 'G':
-                    color = "green" if self.player.has_item else "gray"
+                    color = "green" if self.player._has_item else "gray"
 
                 self.canvas.create_rectangle(x1, y1, x2, y2, fill=color) #Statement is used to color the tiles within the maze
 
         # Why isn't the block that is responsible for drawing the player not nested within a method?
-        [px, py] = [self.player.x, self.player.y]
+        [px, py] = [self.player._x, self.player._y]
         self.canvas.create_oval(
 
             px * TILE_SIZE + TILE_SIZE // 4,
@@ -150,7 +150,7 @@ class MazeGame:
 ### START OF SUBTASK IV ########
     def handle_key(self, event):
         print("Handling Key Presses")
-        if not self.player.reached_goal and self.time_left > 0:
+        if not self.player._reached_goal and self.time_left > 0:
             dx, dy = 0, 0
             key = event.keysym
 
@@ -169,7 +169,7 @@ class MazeGame:
             print(f"{self.draw_maze}")
 ###### END OF SUBTASK IV ######################
 ###### START OF SUBTASK III ###################
-            if self.player.reached_goal:
+            if self.player._reached_goal:
                 elapsed = TIME_LIMIT - self.time_left
                 self.timer_label.config(text=f"🎉 You won in {elapsed} seconds!")
 ###### END OF SUBTASK III #########################
@@ -178,11 +178,11 @@ class MazeGame:
 
     def update_timer(self):
         print("Updating Timer")
-        if self.time_left > 0 and not self.player.reached_goal:
+        if self.time_left > 0 and not self.player._reached_goal:
             self.time_left -= 1
             self.timer_label.config(text=f"Time: {self.time_left}")
             self.root.after(1000, self.update_timer)
-        elif self.time_left == 0 and not self.player.reached_goal:
+        elif self.time_left == 0 and not self.player._reached_goal:
             self.timer_label.config(text="Game Over! Time's up!")
             print("⏳ Time's up! You lost the game.")
 
@@ -193,33 +193,51 @@ class Player:
 
     def __init__(self, x, y):
         print("Initializing Player")
-        self.x = x
-        print(f"{self.x}")
-        self.y = y
-        print(f"{self.y}")
-        self.has_item = False
-        print(f"{self.has_item}")
-        self.reached_goal = False
-        print(f"{self.reached_goal}")
+        self._x = x # Player's x position (private attribute)
+        print(f"{self._x}")
+        self._y = y # Player's y position (private attribute)
+        print(f"{self._y}")
+        self._has_item = False # # Whether the player has picked up the item (private attribute)
+        print(f"{self._has_item}")
+        self._reached_goal = False
+        print(f"{self._reached_goal}") ## Whether the player has reached the goal (private attribute)
+
+    def get_x(self):
+        return self._x
+
+    def get_y(self):
+        return self._y
+
+    def set_y(self, y):
+        self._y = y
+
+    def get_has_item(self):
+        return self._has_item
+
+    def get_reached_goal(self):
+        return self._reached_goal
+
+    def set_reached_goal(self, reached_goal):
+        self._reached_goal = reached_goal
 
     def move(self, dx, dy, maze):
         print("Moving Player")
-        new_x = self.x + dx
-        new_y = self.y + dy
+        new_x = self._x + dx
+        new_y = self._y + dy
 
         if 0 <= new_y < len(maze) and 0 <= new_x < len(maze[0]):
             tile = maze[new_y][new_x]
             if tile != 'W':
-                self.x = new_x
-                self.y = new_y
+                self._x = new_x
+                self._y = new_y
 
-                if tile == 'I' and not self.has_item:
-                    self.has_item = True
+                if tile == 'I' and not self._has_item:
+                    self._has_item = True
                     print("🎉 You picked up the item!")
 
                 if tile == 'G':
-                    if self.has_item:
-                        self.reached_goal = True
+                    if self._has_item:
+                        self._reached_goal = True
                         print("🏁 You reached the goal and won the game!")
                     else:
                         print("⚠️ You need to pick up the item before reaching the goal.")
