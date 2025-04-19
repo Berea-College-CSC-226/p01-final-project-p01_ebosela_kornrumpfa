@@ -126,7 +126,7 @@ class MazeGame:
                 x2 = x1 + TILE_SIZE
                 y2 = y1 + TILE_SIZE
 
-                color = "lightgray"
+                color = "lightgray" #
                 if tile == 'W':
                     color = "black"
                 elif tile == 'I' and not self.player._has_item:
