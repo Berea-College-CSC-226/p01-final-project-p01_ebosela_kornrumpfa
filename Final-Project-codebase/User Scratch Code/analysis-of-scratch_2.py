@@ -41,18 +41,18 @@ MAZE_LAYOUTS = [
 class MazeGame:
     def __init__(self, root):
         ####################
-        self.root = root
+        self.root = root #Object attribute of some sort, that is used when the object is created.
 
         # 🔀 Choose a random maze from the number of mazes defined above.
-        self.maze = random.choice(MAZE_LAYOUTS)
+        self.maze = random.choice(MAZE_LAYOUTS) # From the random module, a function called .choice() is selecting 1/3 of the maze layouts.
         self.rows = len(self.maze)  #The length of the first layer of the nested list determines the number of rows
         self.cols = len(self.maze[0]) #Once the first nested list is selected, the first element of that list is selected and evaluated to determine the columns.
 
-        self.canvas = tk.Canvas(root, width=TILE_SIZE * self.cols, height=TILE_SIZE * self.rows)
-        self.canvas.pack()
+        self.canvas = tk.Canvas(root, width=TILE_SIZE * self.cols, height=TILE_SIZE * self.rows) # The use of .Canvas is what allows the window to be filled with the player area items: tiles, player ball, and objectives.
+        self.canvas.pack() # Used to organize and arrange the widgets.
 
         self.timer_label = tk.Label(root, text=f"Time: {TIME_LIMIT}", font=("Arial", 14))
-        self.timer_label.pack()
+        self.timer_label.pack() #Used to organize and arrange the widgets canvass and label.
 
         self.time_left = TIME_LIMIT  # Set the initial time limit
 
@@ -163,9 +163,11 @@ class Player:
 
 
 
-# Run the game
+# Run the game - modified initial code name variable from root to windows for clarification of its usage.
+
 if __name__ == "__main__":
-    root = tk.Tk()
-    root.title("Maze Game with Timer and Lose Condition")
-    game = MazeGame(root)
-    root.mainloop()
+    window = tk.Tk() # Create a window, similar to turtle.Screen() to create a graphical object.
+    window.title("Random Maze") #Modifying the class attribute 'title' of the window object.
+    game = MazeGame(window) # Game is the object that is created by MazeGame, that is passed the window object that is created by .Tk(). This line demonstrates the use of a class as a blueprint.
+    window.mainloop() # What is .mainloop() referencing? | This is an event handler within the tkinter library. Which keep the program closing, and waits for input.
+
