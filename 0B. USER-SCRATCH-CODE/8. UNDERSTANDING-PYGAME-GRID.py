@@ -1,4 +1,8 @@
+# https://pygame.readthedocs.io/en/latest/tiles/tiles.html
+# https://www.pygame.org/wiki/GettingStarted
 import pygame as pg
+
+
 
 TITLE = "Grid"
 TILES_HORIZONTAL = 10
