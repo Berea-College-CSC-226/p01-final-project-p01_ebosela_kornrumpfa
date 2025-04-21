@@ -29,7 +29,7 @@ Aije.setpos(7,0) # Modifying start position.
 """
 At this point we need to be able to modify the movement of the created objects.
 To accomplish this we are referencing T11_player.py.
-Our initial reference and work is located inside of /1B. AI-EXAMPLE-CODE/4. TURTLE-METHOD-EXAMPLE.py
+Our initial reference and work is located inside of /02. AI-EXAMPLE-CODE-1A/4. TURTLE-METHOD-EXAMPLE.py
 At this stage, we need try and program the now bound keys to specific actions for the turtle objects.
 """
 
