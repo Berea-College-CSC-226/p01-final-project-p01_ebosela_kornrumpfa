@@ -78,7 +78,8 @@ section as you go. DO NOT forget about it!
 3. https://www.youtube.com/watch?v=-0q_miviUDs&t=113s - The Python Maze Game Part 1: A example of a maze program.
 4. https://inventwithpython.com/recursion/chapter11.html - Maze Generater: A website that has examples of code for
     creating mazes with random layouts
-5. 
+5. https://chatgpt.com/share/6808198f-0b3c-8005-abfa-e22bf11722a3 - ChatGPT: Used for creating random maze layouts.
+6. https://chatgpt.com/share/67fab64b-17ac-8005-b03e-2c0e60f7ade5 - ChatGPT: Create an maze example for study purposes.
 ---
  
 ## Milestone 2: Code Setup and Issue Queue
@@ -105,14 +106,17 @@ What has surprised you so far? Describe your general feelings. Be honest with yo
 
 Indicate what percentage of the project you have left to complete and how confident you feel. 
 
-❗️**Completion Percentage**: `0 - 100%`
+️**Completion Percentage**: `75%`
 
-❗️**Confidence**: Describe how confident you feel about completing this project, and why. Then, describe some 
+️**Confidence**: Describe how confident you feel about completing this project, and why. Then, describe some 
   strategies you can employ to increase the likelihood that you'll be successful in completing this project 
   before the deadline.
 
 ```
-    **Replace this text with your reflection
+    I feel preety confident in where we are, and I can definetely see us comfortably completing the project before the
+    deadline. The key for us is to keep communication constant, which includes using the issue que in Github for the 
+    purposed of debugging and testing our code, as well as using applications like slack to communicate tme suggestions
+    for any remaining meetups, as well as siggestions for anything we might want to include in our project.
 ```
 
 ---
