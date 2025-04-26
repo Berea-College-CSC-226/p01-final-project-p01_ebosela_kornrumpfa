@@ -114,6 +114,8 @@ class MazeGame:
         print(f"{self.timer_label.pack}")
         self.scoreboard_label = tk.Label(window, text="🏆 SCOREBOARD:", font=("Arial", 14))
         self.scoreboard_label.pack()
+        self.scores_display = tk.Label(self.window, text="", font=("Arial", 12), justify="left")
+        self.scores_display.pack()
 
     def setup_game_board(self):
         # 🧍‍♂️ Create maze and player before drawing
