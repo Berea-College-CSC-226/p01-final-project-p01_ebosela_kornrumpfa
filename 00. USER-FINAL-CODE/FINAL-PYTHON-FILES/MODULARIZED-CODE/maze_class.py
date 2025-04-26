@@ -1,3 +1,43 @@
+import tkinter as tk
+import random
+from player_class import Player
+
+TILE_SIZE = 40
+TIME_LIMIT = 30  # Time limit in seconds (e.g., 60 seconds)
+
+# 🔁 Multiple, bigger maze layouts, that are hard-coded, but randomly selected.
+MAZE_LAYOUTS = [
+    [
+        [' ', 'W', ' ', ' ', 'W', ' ', ' ', ' ', 'W', ' ', ' ', 'W', ' ', 'G'],
+        [' ', 'W', ' ', 'W', 'W', ' ', 'W', ' ', 'W', ' ', 'W', ' ', 'W', ' '],
+        [' ', ' ', ' ', 'W', ' ', ' ', 'W', ' ', ' ', ' ', 'W', ' ', 'W', ' '],
+        ['W', 'W', ' ', 'W', ' ', 'W', 'W', 'W', 'W', ' ', ' ', ' ', 'W', ' '],
+        [' ', ' ', ' ', ' ', ' ', 'W', ' ', ' ', ' ', 'W', 'W', ' ', ' ', ' '],
+        [' ', 'W', 'W', 'W', ' ', 'W', ' ', 'W', 'W', ' ', ' ', ' ', 'W', ' '],
+        [' ', 'W', ' ', ' ', ' ', ' ', ' ', 'W', 'I', ' ', 'W', ' ', 'W', ' '],
+        [' ', 'W', ' ', 'W', 'W', 'W', ' ', 'W', 'W', ' ', 'W', ' ', 'W', ' '],
+        [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+        ['W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', ' '],
+    ],
+    [
+        [' ', ' ', ' ', 'W', ' ', ' ', ' ', 'W', ' ', ' ', 'G'],
+        ['W', 'W', ' ', 'W', ' ', 'W', ' ', 'W', 'W', ' ', 'W'],
+        [' ', ' ', ' ', ' ', ' ', 'W', ' ', ' ', ' ', ' ', ' '],
+        [' ', 'W', 'W', 'W', ' ', 'W', 'W', 'W', 'W', 'W', ' '],
+        [' ', 'W', ' ', ' ', ' ', ' ', ' ', ' ', 'I', 'W', ' '],
+        [' ', 'W', ' ', 'W', 'W', 'W', 'W', ' ', ' ', 'W', ' '],
+        [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+    ],
+    [
+        [' ', ' ', 'W', ' ', 'G'],
+        ['W', ' ', 'W', ' ', 'W'],
+        ['W', ' ', ' ', ' ', 'W'],
+        ['W', 'W', 'W', 'I', ' '],
+        [' ', ' ', ' ', ' ', ' ']
+    ]
+]
+
+
 class MazeGame:
     def __init__(self, window):
         # The init method takes the new object as the first argument (game as self),
@@ -23,11 +63,11 @@ class MazeGame:
 #### more modular, and highlights functional cohesion.
 
     def setup_GUI(self):
-        self.canvas = tk.Canvas(window, width=TILE_SIZE * self.cols, height=TILE_SIZE * self.rows) # The use of .Canvas is what allows the window to be filled with the player area items: tiles, player ball, and objectives.
+        self.canvas = tk.Canvas(self.window, width=TILE_SIZE * self.cols, height=TILE_SIZE * self.rows) # The use of .Canvas is what allows the window to be filled with the player area items: tiles, player ball, and objectives.
         print(f"{self.canvas}")
         self.canvas.pack() # Used to organize and arrange the widgets.
         print(f"{self.canvas}")
-        self.timer_label = tk.Label(window, text=f"Time: {TIME_LIMIT}", font=("Arial", 14))
+        self.timer_label = tk.Label(self.window, text=f"Time: {TIME_LIMIT}", font=("Arial", 14))
         print(f"{self.timer_label}")
         self.timer_label.pack() #Used to organize and arrange the widgets canvass and label.
         print(f"{self.timer_label.pack}")

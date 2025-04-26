@@ -1,6 +1,4 @@
-from MAZE-CLASS import MazeGame
 class Player:
-
     def __init__(self, x, y):
         print("Initializing Player")
         self._x = x # Player's x position (private attribute)
