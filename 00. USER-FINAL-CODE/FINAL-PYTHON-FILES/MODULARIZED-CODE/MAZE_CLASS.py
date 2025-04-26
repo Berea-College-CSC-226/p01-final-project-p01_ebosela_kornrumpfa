@@ -1,9 +1,9 @@
 import tkinter as tk
 import random
-from player_class import Player
+from PLAYER_CLASS import Player
 
 TILE_SIZE = 40
-TIME_LIMIT = 30  # Time limit in seconds (e.g., 60 seconds)
+#TIME_LIMIT = 30  # Time limit in seconds (e.g., 60 seconds)
 
 # 🔁 Multiple, bigger maze layouts, that are hard-coded, but randomly selected.
 MAZE_LAYOUTS = [
@@ -39,7 +39,7 @@ MAZE_LAYOUTS = [
 
 
 class MazeGame:
-    def __init__(self, window):
+    def __init__(self, window,time_limit):
         # The init method takes the new object as the first argument (game as self),
         # and then set any required instance attributes to a valid state,
         # using any other arguments passed to it (root)
@@ -52,7 +52,7 @@ class MazeGame:
         print(f"{self.rows}")
         self.cols = len(self.maze[0]) #Once the first nested list is selected, the first element of that list is selected and evaluated to determine the columns.
         print(f"{self.cols}")
-        self.time_left = TIME_LIMIT  # Set the initial time limit
+        self.time_left = time_limit  # Set the initial time limit
         print(f"{self.time_left}")
 #### Calls to user defined classes #
         self.setup_GUI()
