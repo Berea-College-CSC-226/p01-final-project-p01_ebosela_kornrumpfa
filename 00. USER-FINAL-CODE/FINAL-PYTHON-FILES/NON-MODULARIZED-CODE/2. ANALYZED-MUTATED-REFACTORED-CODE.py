@@ -112,6 +112,8 @@ class MazeGame:
         print(f"{self.timer_label}")
         self.timer_label.pack() #Used to organize and arrange the widgets canvass and label.
         print(f"{self.timer_label.pack}")
+        self.scoreboard_label = tk.Label(window, text="🏆 SCOREBOARD:", font=("Arial", 14))
+        self.scoreboard_label.pack()
 
     def setup_game_board(self):
         # 🧍‍♂️ Create maze and player before drawing
@@ -208,6 +210,8 @@ class MazeGame:
         elif self.time_left == 0 and not self.player._reached_goal:
             self.timer_label.config(text="Game Over! Time's up!")
             print("⏳ Time's up! You lost the game.")
+
+
 
 ######################### END OF SUBTASK I ##################
 ### REFACTOR & REVIEW PLAYER CLASS

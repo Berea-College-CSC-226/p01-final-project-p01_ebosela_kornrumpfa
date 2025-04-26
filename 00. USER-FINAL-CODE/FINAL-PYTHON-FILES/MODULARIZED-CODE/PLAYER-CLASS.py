@@ -1,4 +1,4 @@
-from MAZE-CLASS import MazeGame
+#from MAZE-CLASS import MazeGame
 class Player:
 
     def __init__(self, x, y):
