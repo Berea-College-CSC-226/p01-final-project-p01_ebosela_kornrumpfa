@@ -195,7 +195,7 @@ class MazeGame:
             if self.player._reached_goal:
                 elapsed = TIME_LIMIT - self.time_left
                 self.timer_label.config(text=f"🎉 You won in {elapsed} seconds!")
-###### END OF SUBTASK III #########################
+###### END OF SUBTASK III ##########################
 
 #The following codeblock operates towards the end of subtask II.
 
