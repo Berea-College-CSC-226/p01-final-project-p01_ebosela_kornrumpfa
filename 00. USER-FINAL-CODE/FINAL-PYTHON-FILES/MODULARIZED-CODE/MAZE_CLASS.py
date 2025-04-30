@@ -82,25 +82,29 @@ MAZE_LAYOUTS = [
 ]
 
 """
-The init method takes the new object as the first argument (game as self),
-and then set any required instance attributes to a valid state,
-using any other arguments passed to it (root). Object attribute of some sort, that is used when the object is created.
-From the random module, a function called .choice() is selecting 1/3 of the maze layouts. # 🔀 Choose a random maze from the number of mazes defined above.
-The length of the first layer of the nested list determines the number of rows. #Once the first nested list is selected, the first element of that list is selected and evaluated to determine the columns.
-Set the initial time limit. Calls to user defined classes. The init method relies on calls to other methods defined in the class, this makes the code more readable more modular, and highlights functional cohesion.
-Used to organize and arrange the widgets. Used to organize and arrange the widgets canvass and label.
-The bind_controls method is heavily coupled with the handle_key method.
-It works to ensure that when any key is pressed, tkinter will call the handle_key method
-loaded with event. The event object is created event.keysym
-An analogy for this statement: "Hey window! If someone presses a key, don't manage that, call my assistant, and give the details.
-This statement self.window.bind("", self.handle_key) is used to route key presses to player movement.
-The .bind() method comes from the __init__ working in combination with ensures that every time a key is pressed, a call to self.handle_key will be made and key information will be passed to it.
-In reference to the __init__ this method will bind to this widget at event SEQUENCE a call to function FUNC.
-.bind(<SEQUENCE>, <FUNCTION>)
- The tkinter event loop established by main?
- This statement use the .bind() method from tkinter to link key presses to the handle_key() method.
-When the user presses any key while the window is in focus, tkinter automatically calls self.handle_key(event).
- This enables the player to move using the arrow keys.
+Initializes the game window, loads a random maze layout, sets up gameplay state,
+and binds player controls for movement via keypresses.
+
+This method (typically __init__) performs the following tasks:
+- Sets up the game object (`self`) with the necessary attributes and valid initial state.
+- Selects a random maze layout from predefined options using `random.choice()`.
+- Determines the maze's dimensions by measuring the length of its nested list structure.
+- Sets the initial time limit for the game.
+- Instantiates and calls other helper methods to promote modularity and readability.
+- Arranges graphical components (e.g., canvas and labels) for visual layout using Tkinter's layout tools.
+
+Keyboard Input Handling:
+- Uses the `.bind()` method from the Tkinter library to link keyboard events to the `handle_key` method.
+- The `bind_controls()` method ensures keypresses (e.g., arrow keys) are captured and routed to the movement handler.
+- Example: `self.window.bind("<Key>", self.handle_key)` tells the program:  
+  "Hey window! If someone presses a key, don’t process it yourself — call `handle_key` and pass the event details."
+
+Event Binding Concept:
+- The `.bind(<SEQUENCE>, <FUNCTION>)` format binds a specific key event (like arrow keys) to a callback function.
+- The `handle_key(event)` method receives the key information via the `event` object (`event.keysym`).
+- Enables real-time control of the player character based on user input.
+
+Overall, this setup supports interactive gameplay using the keyboard, organized through clean object-oriented structure.
 """
 
 class MazeGame:
@@ -109,13 +113,13 @@ class MazeGame:
         print("Create Initializing Maze Game")
         self.window = window
         self.maze = random.choice(MAZE_LAYOUTS)
-        print(f"{self.maze}")
+
         self.rows = len(self.maze)
-        print(f"{self.rows}")
+
         self.cols = len(self.maze[0])
-        print(f"{self.cols}")
+
         self.time_left = time_limit
-        print(f"{self.time_left}")
+
         self.setup_GUI()
         self.setup_game_board()
         self.bind_controls()
@@ -124,38 +128,38 @@ class MazeGame:
 
     def setup_GUI(self):
         self.canvas = tk.Canvas(self.window, width=TILE_SIZE * self.cols, height=TILE_SIZE * self.rows) # The use of .Canvas is what allows the window to be filled with the player area items: tiles, player ball, and objectives.
-        print(f"{self.canvas}")
+
         self.canvas.pack()
-        print(f"{self.canvas}")
+
         self.timer_label = tk.Label(self.window, text=f"Time: {TIME_LIMIT}", font=("Arial", 14))
-        print(f"{self.timer_label}")
+
         self.timer_label.pack()
-        print(f"{self.timer_label.pack}")
+
 
     def setup_game_board(self):
         # 🧍‍♂️ Create maze and player before drawing
         self.player = Player(0, 0)
-        print(f"{self.player}")
+
         self.draw_maze()
-        print(f"{self.draw_maze}")
+
 
 
     def bind_controls(self):
 
         self.window.bind("<KeyPress>", self.handle_key)
-        print(f"{self.window.bind}")
+
 
     def start_game_loop(self):
 
         self.update_timer()
-        print(f"{self.update_timer}")
+
 
 
 
     def draw_maze(self):
         print("Drawing Maze")
         self.canvas.delete("all")
-        print(f"{self.canvas.delete}")
+
         for y in range(self.rows):
             for x in range(self.cols):
                 tile = self.maze[y][x]
@@ -195,17 +199,11 @@ class MazeGame:
                 [dx, dy] = direction
                 self.player.move(dx,dy,self.maze)
                 self.draw_maze()
-            #print(f"{self.player.move}")
-            #self.draw_maze()
-            #print(f"{self.draw_maze}")
-###### END OF SUBTASK IV ######################
-###### START OF SUBTASK III ###################
             if self.player._reached_goal:
                 elapsed = TIME_LIMIT - self.time_left
                 self.timer_label.config(text=f"🎉 You won in {elapsed} seconds!")
-###### END OF SUBTASK III #########################
 
-#The following codeblock operates towards the end of subtask II.
+
 
     def update_timer(self):
         print("Updating Timer")
