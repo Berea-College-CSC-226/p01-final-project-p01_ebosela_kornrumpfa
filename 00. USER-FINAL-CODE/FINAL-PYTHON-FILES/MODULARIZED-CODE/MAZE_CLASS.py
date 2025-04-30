@@ -3,7 +3,7 @@ import random
 from PLAYER_CLASS import Player
 
 TILE_SIZE = 40
-TIME_LIMIT = 0  # Time limit in seconds (e.g., 60 seconds)
+TIME_LIMIT = 0  # TimE limit in seconds (e.g., 60 seconds)
 
 # 🔁 Multiple, bigger maze layouts, that are hard-coded, but randomly selected.
 MAZE_LAYOUTS = [
