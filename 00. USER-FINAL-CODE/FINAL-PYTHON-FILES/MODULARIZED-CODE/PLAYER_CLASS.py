@@ -1,14 +1,21 @@
 class Player:
+
+    """
+        Represents a player in a maze game.
+
+        Attributes:
+            _x (int): Player's x position (private attribute).
+            _y (int): Player's y position (private attribute).
+            _has_item (bool): Whether the player has picked up the item (private attribute).
+            _reached_goal (bool): Whether the player has reached the goal (private attribute).
+        """
+
     def __init__(self, x, y):
-        print("Initializing Player")
-        self._x = x # Player's x position (private attribute)
-        print(f"{self._x}")
-        self._y = y # Player's y position (private attribute)
-        print(f"{self._y}")
-        self._has_item = False # # Whether the player has picked up the item (private attribute)
-        print(f"{self._has_item}")
+        self._x = x
+        self._y = y
+        self._has_item = False
         self._reached_goal = False
-        print(f"{self._reached_goal}") ## Whether the player has reached the goal (private attribute)
+
 
     def get_x(self):
         return self._x
@@ -18,6 +25,9 @@ class Player:
 
     def set_y(self, y):
         self._y = y
+
+    def set_x(self, x):
+        self._x = x
 
     def get_has_item(self):
         return self._has_item

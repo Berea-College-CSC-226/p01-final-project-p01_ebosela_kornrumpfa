@@ -16,6 +16,6 @@ the game module from MAZE_CLASS.py.
 if __name__ == "__main__":
     window = tk.Tk() # This references out to
     window.title("Random Maze Game") # Titles the Maze.
-    user_input = tk.simpledialog.askinteger("Set your timer.", "Enter the desired time limit, min is 30, max is 60",minvalue=30,maxvalue=120)
+    user_input = tk.simpledialog.askinteger("Set your timer.", "Enter the desired time limit, min is 30 sec, max is 60 sec",minvalue=30,maxvalue=60)
     game = MazeGame(window, time_limit=user_input) # # This references out to MAZE_CLASS.py, which references PLAYER_CLASS.py
     window.mainloop() #Keeps the window open.
