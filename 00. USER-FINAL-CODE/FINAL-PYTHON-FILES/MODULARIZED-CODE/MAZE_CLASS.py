@@ -117,7 +117,7 @@ class MazeGame:
         self.rows = len(self.maze)
 
         self.cols = len(self.maze[0])
-
+        self.initial_time = time_limit
         self.time_left = time_limit
 
         self.setup_GUI()
@@ -200,7 +200,7 @@ class MazeGame:
                 self.player.move(dx,dy,self.maze)
                 self.draw_maze()
             if self.player._reached_goal:
-                elapsed = TIME_LIMIT - self.time_left
+                elapsed = self.initial_time - self.time_left
                 self.timer_label.config(text=f"🎉 You won in {elapsed} seconds!")
 
 
